@@ -35,6 +35,10 @@ body {
   background-color: var(--Background-Ligth-Colors);
 }
 
+.maincontent .navbar {
+  max-width: 1500px;
+}
+
 /* NavBar */
 
 header {
@@ -57,8 +61,11 @@ header {
 
 .navbar--title {
   font-family: "lora";
-  color: var(--Primary-Colors);
   font-size: calc(var(--Size-Text) * 1.5);
+}
+
+.navbar--title a {
+  color: var(--Primary-Colors);
 }
 
 .navbar--nav {
@@ -135,6 +142,13 @@ header {
   border-radius: var(--Border-Radius);
   color: var(--Background-Ligth-Colors);
   background-color: var(--Primary-Colors);
+  box-shadow: var(--Shadow-Box);
+}
+
+.btn:hover {
+  color: var(--Primary-Colors);
+  border: var(--Border-Bottom);
+  background-color: var(--Secondary-Colors);
 }
 
 /* Section About */
@@ -172,3 +186,87 @@ header {
 }
 
 /* Setion Works */
+
+.workcontent {
+  gap: 50px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: var(--Border-Bottom);
+}
+
+.workcontent--title {
+  font-size: var(--Size-Title);
+  font-family: var(--Font-Family-Title);
+}
+
+.workcontent--galery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.workcontent--img {
+  object-fit: cover;
+  width: var(--Size-img-Width);
+  height: var(--Size-img-heigth);
+}
+
+/* Section Contac */
+
+.contac {
+  gap: 50px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contac--title {
+  color: var(--Primary-Colors);
+  font-size: var(--Size-Title);
+  font-family: var(--Font-Family-Title);
+}
+
+.contac--forms {
+  gap: 20px;
+  width: 1000px;
+  height: 600px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: var(--Secondary-Colors);
+}
+
+.contac--forms input {
+  outline: 0;
+  color: var(--Primary-Colors);
+  width: 100%;
+  border: none;
+  padding: 5px;
+  background-color: transparent;
+  border-bottom: var(--Border-Bottom);
+  font-family: var(--Font-Family-Text);
+  font-size: calc(var(--Size-Text) - 3);
+}
+
+.contac--forms textarea {
+  padding: 10px;
+  font-size: var(--Size-Text);
+  background-color: transparent;
+  border-radius: var(--Border-Radius);
+  font-family: var(--Font-Family-Text);
+}
+
+.btn--forms {
+  display: flex;
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+}
