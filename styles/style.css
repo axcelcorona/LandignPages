@@ -5,38 +5,54 @@
   --Primary-Colors: #1e293b;
   --Secondary-Colors: #cbd5e1;
   --Background-Colors: #e6e6e6;
+  --Background-Ligth-Colors: #f8fafc;
   --Text-ligth-Colors: #f8fafc;
-  --Border-Radius: 10px;
-  --Size-Title: 3.43rem;
-  --Size-Text: 2.18rem;
+  --Border-Radius: 5px;
+  --Font-Family-Title: "lora";
+  --Font-Family-Text: "poppins";
+  --Size-Title: 3rem;
+  --Size-Text: 1.3rem;
   --Icons-Size: 1.56rem;
   --Shadow-Box: 0 4 4 rgba(0, 0, 0, 0.25);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 90%;
 }
 
 * {
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 body {
-  font-family: "poppins", "arial";
+  font-family: var(--Font-Family-Text);
+  background-color: var(--Background-Ligth-Colors);
 }
 
 /* NavBar */
+
+header {
+  background-color: var(--Secondary-Colors);
+}
+
 .navbar {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 75px;
   display: flex;
-  padding: 0 24px;
+  position: sticky;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--Secondary-Colors);
 }
 
 .navbar--title {
   font-family: "lora";
   color: var(--Primary-Colors);
-  font-size: var(--Size-Text);
+  font-size: calc(var(--Size-Text) * 1.5);
 }
 
 .navbar--nav {
@@ -50,7 +66,7 @@ body {
   width: 100%;
   height: 75px;
   display: flex;
-  margin: 0 10px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
 }
@@ -72,4 +88,44 @@ body {
 
 .nav--item a:hover {
   color: var(--Secondary-Colors);
+}
+
+/* Section Hero */
+
+.maincontent--hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hero--content {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero--title {
+  margin: 10px 0;
+  color: var(--Primary-Colors);
+  font-size: var(--Size-Title);
+  font-family: var(--Font-Family-Title);
+}
+
+.hero--paragraph {
+  color: var(--Primary-Colors);
+  font-size: var(--Size-Text);
+}
+
+.btn {
+  padding: 10px 50px;
+  margin: 10px 0;
+  border-radius: var(--Border-Radius);
+  color: var(--Background-Ligth-Colors);
+  background-color: var(--Primary-Colors);
 }
