@@ -6,6 +6,7 @@
   --Secondary-Colors: #cbd5e1;
   --Background-Colors: #e6e6e6;
   --Background-Ligth-Colors: #f8fafc;
+  --Border-Bottom: 1px solid rgba(30, 41, 59, 0.35);
   --Text-ligth-Colors: #f8fafc;
   --Border-Radius: 5px;
   --Font-Family-Title: "lora";
@@ -35,6 +36,9 @@ body {
 /* NavBar */
 
 header {
+  top: 0;
+  left: 0;
+  position: sticky;
   background-color: var(--Secondary-Colors);
 }
 
@@ -99,6 +103,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  border-bottom: var(--Border-Bottom);
 }
 
 .hero--content {
@@ -128,4 +133,38 @@ header {
   border-radius: var(--Border-Radius);
   color: var(--Background-Ligth-Colors);
   background-color: var(--Primary-Colors);
+}
+
+/* Section About */
+
+.about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: var(--Border-Bottom);
+}
+
+.aboutcontent--title {
+  color: var(--Primary-Colors);
+  font-size: var(--Size-Title);
+  font-family: var(--Font-Family-Title);
+}
+
+.aboutcontent--body {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutcontent--img {
+  width: 700px;
+}
+
+.aboutcontent--paragraph {
+  font-size: var(--Size-Text);
+  width: 50%;
 }
